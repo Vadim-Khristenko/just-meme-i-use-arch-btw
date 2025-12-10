@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i use arch btw // elite edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        .crt::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.97; }
+            5% { opacity: 0.95; }
+            10% { opacity: 0.9; }
+            15% { opacity: 0.95; }
+            20% { opacity: 0.99; }
+            100% { opacity: 0.94; }
+        }
+        .flicker-effect {
+            animation: flicker 0.15s infinite;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1b26; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1793d1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4ade80; 
+        }
+
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .neon-text {
+            text-shadow: 0 0 5px rgba(74, 222, 128, 0.5);
+        }
+        .neon-blue {
+            text-shadow: 0 0 5px rgba(23, 147, 209, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 relative bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+    
+    <div class="crt fixed inset-0 pointer-events-none w-full h-full z-50"></div>
+
+    <div class="fixed top-20 left-20 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+    <div class="fixed bottom-20 right-20 w-72 h-72 bg-green-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+    <div class="flicker-effect w-full max-w-5xl bg-[#1a1b26]/90 backdrop-blur-md border border-[#414868] rounded-lg shadow-[0_0_50px_rgba(23,147,209,0.15)] z-10 overflow-hidden flex flex-col h-auto md:min-h-[600px]">
+        <div class="bg-[#15161e] px-4 py-2 flex items-center justify-between border-b border-[#414868]">
+            <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-[#f7768e] hover:bg-red-400 transition cursor-pointer"></div>
+                <div class="w-3 h-3 rounded-full bg-[#e0af68] hover:bg-yellow-400 transition cursor-pointer"></div>
+                <div class="w-3 h-3 rounded-full bg-[#9ece6a] hover:bg-green-400 transition cursor-pointer"></div>
+            </div>
+            <div class="text-xs text-[#565f89] font-bold tracking-wider">
+                user@archlinux: ~
+            </div>
+            <div class="text-[#565f89] text-xs">zsh</div>
+        </div>
+        <div class="p-6 md:p-8 flex-1 overflow-y-auto font-mono text-sm md:text-base relative">
+            
+            <!-- Симуляция NEOFETCH но в принципе можно поменять на что угодно -->
+            <div class="mb-8">
+                <div class="flex flex-wrap items-center">
+                    <span class="text-[#9ece6a] font-bold mr-2">➜</span>
+                    <span class="text-[#7aa2f7] font-bold mr-2">~</span>
+                    <span class="text-[#c0caf5]">neofetch</span>
+                </div>
+                
+                <div class="mt-4 flex flex-col md:flex-row gap-8 animate-fade-in-up">
+                    <div class="hidden md:block text-[#1793d1] font-bold leading-tight select-none neon-blue text-xs lg:text-sm">
+<pre>
+       /\
+      /  \
+     /    \
+    /      \
+   /   ,,   \
+  /   |  |   \
+ /_-''    ''-_\
+</pre>
+                    </div>
+
+                    <div class="text-[#a9b1d6] space-y-1">
+                        <div><span class="text-[#1793d1] font-bold">user</span>@<span class="text-[#1793d1] font-bold">archlinux</span></div>
+                        <div>----------------</div>
+                        <div><span class="text-[#9ece6a] font-bold">OS</span>: Arch Linux x86_64</div>
+                        <div><span class="text-[#9ece6a] font-bold">Kernel</span>: 6.8.9-arch1-1</div>
+                        <div><span class="text-[#9ece6a] font-bold">Uptime</span>: 42 mins</div>
+                        <div><span class="text-[#9ece6a] font-bold">Packages</span>: 1337 (pacman)</div>
+                        <div><span class="text-[#9ece6a] font-bold">Shell</span>: zsh 5.9</div>
+                        <div><span class="text-[#9ece6a] font-bold">WM</span>: Hyprland</div>
+                        <div><span class="text-[#9ece6a] font-bold">Theme</span>: Nordic [GTK2/3]</div>
+                        <div><span class="text-[#9ece6a] font-bold">Terminal</span>: Alacritty</div>
+                        <div class="mt-2 flex space-x-1">
+                            <div class="w-4 h-4 bg-[#1a1b26]"></div>
+                            <div class="w-4 h-4 bg-[#f7768e]"></div>
+                            <div class="w-4 h-4 bg-[#9ece6a]"></div>
+                            <div class="w-4 h-4 bg-[#e0af68]"></div>
+                            <div class="w-4 h-4 bg-[#7aa2f7]"></div>
+                            <div class="w-4 h-4 bg-[#bb9af7]"></div>
+                            <div class="w-4 h-4 bg-[#7dcfff]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <div class="flex items-center">
+                    <span class="text-[#9ece6a] font-bold mr-2">➜</span>
+                    <span class="text-[#7aa2f7] font-bold mr-2">~</span>
+                    <span class="text-[#c0caf5]">echo $STATUS</span>
+                </div>
+                <div class="mt-2 text-3xl md:text-5xl font-bold text-[#1793d1] neon-blue tracking-tighter">
+                    I USE ARCH <span class="text-[#73daca] neon-text">BTW</span>
+                </div>
+            </div>
+
+            <!-- Типо pacman -->
+            <div class="mb-4">
+                <div class="flex items-center mb-2">
+                    <span class="text-[#9ece6a] font-bold mr-2">➜</span>
+                    <span class="text-[#7aa2f7] font-bold mr-2">~</span>
+                    <span id="input-line" class="text-[#c0caf5]"></span><span class="cursor-blink w-2 h-5 bg-[#a9b1d6] inline-block align-middle ml-1"></span>
+                </div>
+                <div id="pacman-output" class="text-xs md:text-sm font-mono space-y-1 text-[#a9b1d6] h-48 overflow-y-auto hidden">
+                    <!-- Магия JS короче тут всё сделает -->
+                </div>
+            </div>
+
+            <div class="mt-auto border-t border-[#414868] pt-4 flex justify-between items-center">
+                <div class="text-xs text-[#565f89]">
+                    <span class="mr-2">NORMAL MODE</span> 
+                    <span class="text-[#9ece6a]">master*</span>
+                </div>
+                <button id="run-update" class="px-4 py-2 bg-[#1793d1] hover:bg-[#1481b8] text-white text-xs font-bold rounded shadow-[0_0_15px_rgba(23,147,209,0.4)] transition-all hover:scale-105 active:scale-95 uppercase tracking-widest">
+                    sudo pacman -Syu
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const runBtn = document.getElementById('run-update');
+        const outputDiv = document.getElementById('pacman-output');
+        const inputLine = document.getElementById('input-line');
+        const cursor = document.querySelector('.cursor-blink');
+
+        const command = "sudo pacman -Syu --noconfirm";
+        
+        const pacmanLogs = [
+            ":: Синхронизация баз данных пакетов...",
+            " core загрузка...",
+            " extra загрузка...",
+            " community загрузка...",
+            ":: Запуск полного обновления системы...",
+            "разрешение зависимостей...",
+            "проверка конфликтов...",
+            ":: Пакеты (4) linux-6.8.9 mesa-24.0 vim-9.1 firefox-125",
+            "",
+            ":: Приступаю к установке...",
+            "(1/4) обновление linux-api-headers    [######################] 100%",
+            "(2/4) обновление filesystem           [######################] 100%",
+            "(3/4) обновление linux                [######################] 100%",
+            "(4/4) обновление mesa                 [######################] 100%",
+            "(4/4) проверка ключей                 [######################] 100%",
+            ":: Запуск post-transaction hooks...",
+            "(1/2) Arming ConditionNeedsUpdate...",
+            "(2/2) Updating initramfs...",
+            "Generating grub configuration file ...",
+            "Found theme: /boot/grub/themes/arch-silence/theme.txt",
+            "Found linux image: /boot/vmlinuz-linux",
+            "Found initrd image: /boot/initramfs-linux.img",
+            "done",
+            "",
+            "<span class='text-[#9ece6a] font-bold'>:: Система обновлена. Вы великолепны.</span>",
+            "<span class='text-[#73daca]'>:: Не забудьте рассказать об этом друзьям.</span>"
+        ];
+
+        runBtn.addEventListener('click', async () => {
+            if (runBtn.disabled) return;
+            
+            runBtn.disabled = true;
+            runBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            outputDiv.innerHTML = '';
+            outputDiv.classList.remove('hidden');
+            inputLine.textContent = '';
+            
+            for (let i = 0; i < command.length; i++) {
+                inputLine.textContent += command[i];
+                await new Promise(r => setTimeout(r, 60));
+            }
+
+            await new Promise(r => setTimeout(r, 750));
+            
+            for (let line of pacmanLogs) {
+                const p = document.createElement('div');
+                p.innerHTML = line;
+                outputDiv.appendChild(p);
+                outputDiv.scrollTop = outputDiv.scrollHeight;
+                const delay = Math.random() * 300 + 50; 
+                await new Promise(r => setTimeout(r, delay));
+            }
+
+            runBtn.disabled = false;
+            runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            runBtn.textContent = "Обновить еще раз (зачем?)";
+            
+            const finalPrompt = document.createElement('div');
+            finalPrompt.innerHTML = `<div class="mt-4 flex items-center"><span class="text-[#9ece6a] font-bold mr-2">➜</span><span class="text-[#7aa2f7] font-bold mr-2">~</span></div>`;
+            outputDiv.appendChild(finalPrompt);
+            outputDiv.scrollTop = outputDiv.scrollHeight;
+        });
+    </script>
+</body>
+</html>
